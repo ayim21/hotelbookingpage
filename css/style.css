@@ -1,0 +1,390 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+    padding: .3rem .5rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2 {
+    margin: 1rem 0 .5rem 0;
+    font-size: 1.5rem;
+}
+
+p {
+    margin: .5rem 0;
+}
+
+.container {
+    max-width: 1024px;
+    margin: .15rem auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    margin: 0 3rem;
+}
+
+nav {
+    width: 15%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    padding-top: 2.5rem;
+}
+
+nav ul li a:hover {
+    box-shadow: 0 -.15rem 0 0 #0065fc;
+    padding-top: 2.5rem;
+    color: #0065fc;
+    font-weight: bold;
+}
+
+/****************/
+/* SERACH BLOCK */
+/****************/
+
+#search {
+    margin: 0 3rem;
+}
+
+.hidden {
+    position: absolute;
+    z-index: -99;
+    left: -999px;
+    bottom: 0;
+    top: 0;
+}
+
+.fas {
+    font-size: 1.3rem;
+    padding: 0 .5rem;
+}
+
+#search_input div {
+    display: flex;
+    width: 30%;
+    margin: 1rem 0 2rem 0;
+}
+
+#search_input div > i {
+    padding: 1.15rem 1.5rem;
+    background-color: #f2f2f2;
+    border-radius: 1.1rem 0 0 1.1rem;
+}
+
+#search_input div > input {
+    border: none;
+    border-top: .1rem solid #f2f2f2;
+    border-bottom: .1rem solid #f2f2f2;
+    width: 60%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#search_input div > button {
+    border: none;
+    background-color: #0065fc;
+    color: #fff;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 0 1.1rem 1.1rem 0;
+}
+
+#search_filter {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#search_filter p {
+    margin-right: 2rem;
+    padding: .8rem 2.5rem .8rem 0;
+}
+
+#search_filter .filter_border {
+    border-top: .2rem solid #f2f2f2;
+    border-right: .2rem solid #f2f2f2;
+    border-bottom: .2rem solid #f2f2f2;
+    border-radius: 5rem;
+    padding: 0 1.5rem 0 0;
+}
+
+#search_filter .fas {
+    color: #0065fc;
+    background-color: #deebff;
+    padding: 1.4rem 1.5rem;
+    border-radius: 5rem;
+    margin-right: 1rem;
+}
+
+#search_info {
+    margin: 1.5rem 0;
+}
+
+#search_info > p i {
+    color: #0065fc;
+    font-size: .8rem;
+    padding: .5rem .7rem;
+    margin-right: 1rem;
+    border: .1rem solid #cdcdcd;
+    border-radius: 5rem;
+}
+
+/**********************/
+/* ACCOMODATION BLOCK */
+/**********************/
+
+#accomodation {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3rem;
+}
+
+#accomodation_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    background-color: #f2f2f2;
+    padding: 2.5rem;
+    border-radius: 2rem;
+}
+
+#accomodation_main div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+}
+
+#accomodation_main > p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.accomodation_main_card {
+    margin: 0;
+    width: 30%;
+    height: 14.5rem;
+    background-color: #fff;
+    border-radius: .7rem;
+    box-shadow: .1rem .1rem .5rem .2rem #cdcdcd;
+}
+
+.accomodation_main_card img {
+    object-fit: cover;
+    width: 100%;
+    height: 8rem;
+    border-radius: .7rem .7rem 0 0;
+    padding: .3rem .3rem 0 .3rem;
+}
+
+.accomodation_main_card figcaption {
+    margin-left: 1rem;
+}
+
+.accomodation_main_card_name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.accomodation_main_card_rating .fas {
+    padding: 0 .1rem 0 0;
+    font-size: 1.1rem;
+}
+
+.blue {
+    color: #0065fc;
+}
+
+.gray {
+    color: #f2f2f2;
+}
+
+#accomodation_top {
+    width: 35%;
+    background-color: #f2f2f2;
+    padding: 2.5rem;
+    border-radius: 2rem;
+}
+
+#accomodation_top_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.5rem;
+}
+
+#accomodation_top_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.accomodation_top_card {
+    margin: 0;
+    width: 100%;
+    height: 11rem;
+    background-color: #fff;
+    padding: .3rem;
+    border-radius: .7rem;
+    display: flex;
+    box-shadow: .1rem .1rem .5rem .2rem #cdcdcd;
+}
+
+.accomodation_top_card img {
+    object-fit: cover;
+    width: 10rem;
+    height: 100%;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.accomodation_top_card figcaption {
+    margin-left: 1.5rem;
+}
+
+.accomodation_top_card_name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.accomodation_top_card_rating {
+    margin-top: 4rem;
+}
+
+.accomodation_top_card_rating .fas {
+    padding: 0 .1rem 0 0;
+    font-size: 1.1rem;
+}
+
+/**********************/
+/* ACCOMODATION BLOCK */
+/**********************/
+
+#activities {
+    margin: 5rem 3rem;
+}
+
+#activities div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "one two four five"
+        "one three four six";
+    grid-gap: 2rem;
+    margin-top: 2rem;
+}
+
+.activities_card {
+    margin: 0;
+    box-shadow: .1rem .1rem .5rem .2rem #cdcdcd;
+    border-radius: .7rem;
+}
+
+.activities_card img {
+    border-radius: .5rem .5rem 0 0;
+    object-fit: cover;
+    width: 100%;
+    height: 12rem;
+}
+
+.activities_card figcaption {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#one {
+    grid-area: one;
+}
+
+#one img {
+    height: 30.5rem;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#four img {
+    height: 30.5rem;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 3rem;
+    display: flex;
+}
+
+footer p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+footer div {
+    margin-right: 20rem;
+}
+
+footer div ul {
+    margin-top: 2rem;
+}
+
+footer ul li {
+    padding: .5rem 0;
+}
+
+footer div ul li a {
+    padding: .5rem 0;
+}
