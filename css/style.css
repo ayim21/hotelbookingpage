@@ -51,17 +51,13 @@ header {
     margin: 0 3rem;
 }
 
-nav {
-    width: 15%;
-}
-
 nav ul {
     display: flex;
     justify-content: space-between;
 }
 
 nav ul li {
-    padding-top: 2.5rem;
+    padding: 2.5rem 1rem 1rem 1rem;
 }
 
 nav ul li a:hover {
@@ -108,7 +104,7 @@ nav ul li a:hover {
     border: none;
     border-top: .1rem solid #f2f2f2;
     border-bottom: .1rem solid #f2f2f2;
-    width: 60%;
+    width: 100rem;
     padding: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
@@ -126,6 +122,7 @@ nav ul li a:hover {
 
 #search_filter {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     font-weight: bold;
     font-size: 1.2rem;
@@ -261,7 +258,6 @@ nav ul li a:hover {
     width: 100%;
     height: 11rem;
     background-color: #fff;
-    padding: .3rem;
     border-radius: .7rem;
     display: flex;
     box-shadow: .1rem .1rem .5rem .2rem #cdcdcd;
@@ -272,10 +268,12 @@ nav ul li a:hover {
     width: 10rem;
     height: 100%;
     border-radius: .5rem 0 0 .5rem;
+    padding: .3rem;
 }
 
 .accomodation_top_card figcaption {
     margin-left: 1.5rem;
+    padding: .3rem;
 }
 
 .accomodation_top_card_name {
@@ -292,9 +290,9 @@ nav ul li a:hover {
     font-size: 1.1rem;
 }
 
-/**********************/
-/* ACCOMODATION BLOCK */
-/**********************/
+/********************/
+/* ACTIVITIES BLOCK */
+/********************/
 
 #activities {
     margin: 5rem 3rem;
@@ -387,4 +385,68 @@ footer ul li {
 
 footer div ul li a {
     padding: .5rem 0;
+}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+@media screen and (max-width: 991px) {
+    #accomodation_main {
+        width: 65%;
+    }
+
+    .accomodation_main_card {
+        width: 47%;
+    }
+
+    #accomodation_top {
+        width: 33%;
+    }
+
+    #accomodation_top_title {
+        margin-bottom: 2rem;
+    }
+
+    .accomodation_top_card {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        height: 16rem;
+        background-color: #fff;
+        border-radius: .7rem;
+        box-shadow: .1rem .1rem .5rem .2rem #cdcdcd;
+    }
+    
+    .accomodation_top_card img {
+        object-fit: cover;
+        width: 100%;
+        height: 8rem;
+        border-radius: .7rem .7rem 0 0;
+        padding: .3rem .3rem 0 .3rem;
+    }
+    
+    .accomodation_top_card figcaption {
+        margin: 1rem;
+    }
+    
+    .accomodation_top_card_name {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .accomodation_top_card_rating {
+        margin-top: 0;
+    }
+    
+    .accomodation_top_card_rating .fas {
+        padding: 0 .1rem 0 0;
+        font-size: 1.1rem;
+    }
+
+    footer div {
+        margin-right: 10rem;
+    }
 }
