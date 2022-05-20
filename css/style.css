@@ -18,7 +18,7 @@ img {
 a {
     text-decoration: none;
     color: #111;
-    padding: .3rem .5rem;
+    line-height: 1.5;
 }
 
 ul {
@@ -40,15 +40,18 @@ p {
 }
 
 .container {
-    max-width: 1024px;
-    margin: .15rem auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    height: 5rem;
-    margin: 0 3rem;
+    margin: 0 3rem 3rem 3rem;
+}
+
+header img {
+    width: 8rem;
 }
 
 nav ul {
@@ -58,17 +61,20 @@ nav ul {
 
 nav ul li {
     padding: 2.5rem 1rem 1rem 1rem;
+    width: 100%;
+    text-align: center;
 }
 
 nav ul li a:hover {
     box-shadow: 0 -.15rem 0 0 #0065fc;
     padding-top: 2.5rem;
-    color: #0065fc;
     font-weight: bold;
+    color: #0065fc;
+    width: 100%;
 }
 
 /****************/
-/* SERACH BLOCK */
+/* SEARCH BLOCK */
 /****************/
 
 #search {
@@ -391,7 +397,7 @@ footer div ul li a {
 /* MEDIA QUERIES */
 /*****************/
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
     #accomodation_main {
         width: 65%;
     }
@@ -448,5 +454,125 @@ footer div ul li a {
 
     footer div {
         margin-right: 10rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        margin-top: 2rem;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        border-bottom: .1rem solid #f2f2f2;
+        line-height: 4;
+    }
+
+    header nav ul li a:hover {
+        box-shadow: none;
+        border-bottom: .1rem solid #0065fc;
+        padding-top: 0;
+    }
+
+    #accomodation {
+        flex-direction: column-reverse;
+    }
+
+    #accomodation_main {
+        width: 100%;
+        background: none;
+    }
+
+    #accomodation_main h2 {
+        margin-bottom: 2rem;
+    }
+
+    #accomodation_main div {
+        margin-bottom: 2rem;
+    }
+
+    #accomodation_top {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .accomodation_top_card {
+        flex-direction: row;
+        height: 11rem;
+    }
+
+    .accomodation_top_card img {
+        width: 15rem;
+        height: 100%;
+        padding: .3rem;
+        border-radius: .7rem 0 0 .7rem;
+    }
+
+    #activities div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "one two"
+            "one three"
+            "five four"
+            "six four";
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer div {
+        margin: 0 0 3rem 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #accomodation_main {
+        padding: 2.5rem 0;
+    }
+
+    .accomodation_main_card {
+        width: 100%;
+        height: 16.5rem
+    }
+
+    .accomodation_main_card img {
+        height: 10rem;
+    }
+    
+    .accomodation_top_card img {
+        width: 10rem;
+    }
+
+    #activities div {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .activities_card {
+        margin: 2.5rem 0;
+    }
+
+    .activities_card img {
+        height: 12rem;
+    }
+
+    #one img {
+        height: 12rem;
+    }
+
+    #four img {
+        height: 12rem;
     }
 }

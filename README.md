@@ -1,3 +1,5 @@
-#From design into web page
-#Responsive design: desktop & tablet versions done
-#Responsive design: smartphone version to come
+##From design into web page
+
+##Responsive design:
+
+#Breakpoints: 1200px / 1024px / 768px / 500px
