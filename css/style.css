@@ -39,6 +39,10 @@ p {
     margin: .5rem 0;
 }
 
+span {
+    display: block;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -47,11 +51,13 @@ p {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 3rem 3rem 3rem;
 }
 
 header img {
-    width: 8rem;
+    object-fit: cover;
+    width: 12rem;
 }
 
 nav ul {
@@ -147,6 +153,11 @@ nav ul li a:hover {
     padding: 0 1.5rem 0 0;
 }
 
+.filter_border:hover {
+    background: #deebff;
+    transform: scaleX(1.05);
+}
+
 #search_filter .fas {
     color: #0065fc;
     background-color: #deebff;
@@ -188,7 +199,7 @@ nav ul li a:hover {
     border-radius: 2rem;
 }
 
-#accomodation_main div {
+#accomodation_main_grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -203,21 +214,26 @@ nav ul li a:hover {
 .accomodation_main_card {
     margin: 0;
     width: 30%;
-    height: 14.5rem;
+    height: 15.5rem;
     background-color: #fff;
     border-radius: .7rem;
     box-shadow: .1rem .1rem .5rem .2rem #cdcdcd;
+    transition: .3s;
+}
+
+.accomodation_main_card:hover {
+    transform: scale(1.1);
 }
 
 .accomodation_main_card img {
     object-fit: cover;
     width: 100%;
-    height: 8rem;
+    height: 9rem;
     border-radius: .7rem .7rem 0 0;
     padding: .3rem .3rem 0 .3rem;
 }
 
-.accomodation_main_card figcaption {
+.accomodation_main_card p {
     margin-left: 1rem;
 }
 
@@ -250,7 +266,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
 }
 
 #accomodation_top_grid {
@@ -265,21 +281,32 @@ nav ul li a:hover {
     height: 11rem;
     background-color: #fff;
     border-radius: .7rem;
-    display: flex;
     box-shadow: .1rem .1rem .5rem .2rem #cdcdcd;
+    transition: .3s;
+}
+
+.accomodation_top_card:hover {
+    transform: scale(1.1);
+}
+
+.accomodation_top_card a {
+    display: flex;
 }
 
 .accomodation_top_card img {
     object-fit: cover;
     width: 10rem;
-    height: 100%;
+    height: 11rem;
     border-radius: .5rem 0 0 .5rem;
     padding: .3rem;
 }
 
-.accomodation_top_card figcaption {
+.accomodation_top_card p {
     margin-left: 1.5rem;
     padding: .3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .accomodation_top_card_name {
@@ -287,9 +314,9 @@ nav ul li a:hover {
     font-size: 1.2rem;
 }
 
-.accomodation_top_card_rating {
+/*.accomodation_top_card_rating {
     margin-top: 4rem;
-}
+}*/
 
 .accomodation_top_card_rating .fas {
     padding: 0 .1rem 0 0;
@@ -304,7 +331,7 @@ nav ul li a:hover {
     margin: 5rem 3rem;
 }
 
-#activities div {
+#activities_grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -319,6 +346,11 @@ nav ul li a:hover {
     margin: 0;
     box-shadow: .1rem .1rem .5rem .2rem #cdcdcd;
     border-radius: .7rem;
+    transition: .3s;
+}
+
+.activities_card:hover {
+    transform: scale(1.05);
 }
 
 .activities_card img {
@@ -328,7 +360,7 @@ nav ul li a:hover {
     height: 12rem;
 }
 
-.activities_card figcaption {
+.activities_card_name {
     padding: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
@@ -393,6 +425,10 @@ footer div ul li a {
     padding: .5rem 0;
 }
 
+footer div ul li a:hover {
+    font-weight: bold;
+}
+
 /*****************/
 /* MEDIA QUERIES */
 /*****************/
@@ -400,6 +436,10 @@ footer div ul li a {
 @media screen and (max-width: 1024px) {
     #accomodation_main {
         width: 65%;
+    }
+
+    #accomodation_main_grid {
+        margin: 1rem 0;
     }
 
     .accomodation_main_card {
@@ -411,7 +451,7 @@ footer div ul li a {
     }
 
     #accomodation_top_title {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     .accomodation_top_card {
@@ -419,22 +459,26 @@ footer div ul li a {
         flex-direction: column;
         margin: 0;
         width: 100%;
-        height: 16rem;
+        height: 18rem;
         background-color: #fff;
         border-radius: .7rem;
         box-shadow: .1rem .1rem .5rem .2rem #cdcdcd;
+    }
+
+    .accomodation_top_card a {
+        flex-direction: column;
     }
     
     .accomodation_top_card img {
         object-fit: cover;
         width: 100%;
-        height: 8rem;
+        height: 9.5rem;
         border-radius: .7rem .7rem 0 0;
         padding: .3rem .3rem 0 .3rem;
     }
     
-    .accomodation_top_card figcaption {
-        margin: 1rem;
+    .accomodation_top_card p {
+        margin: .5rem 1rem .5rem 1rem;
     }
     
     .accomodation_top_card_name {
@@ -497,8 +541,16 @@ footer div ul li a {
         margin-bottom: 2rem;
     }
 
-    #accomodation_main div {
+    #accomodation_main_grid {
         margin-bottom: 2rem;
+    }
+
+    .accomodation_main_card {
+        height: 18.5rem;
+    }
+
+    .accomodation_main_card img {
+        height: 12rem;
     }
 
     #accomodation_top {
@@ -508,17 +560,32 @@ footer div ul li a {
 
     .accomodation_top_card {
         flex-direction: row;
-        height: 11rem;
+        height: 15rem;
+    }
+
+    .accomodation_top_card:hover {
+        transform: scaleY(1.05);
+    }
+
+    .accomodation_top_card a {
+        flex-direction: row;
     }
 
     .accomodation_top_card img {
-        width: 15rem;
-        height: 100%;
+        width: 20rem;
+        height: 15rem;
         padding: .3rem;
         border-radius: .7rem 0 0 .7rem;
     }
 
-    #activities div {
+    .accomodation_top_card p {
+        justify-content: center;
+        line-height: 3.5;
+        margin: .5rem 0;
+        padding: 0 1rem;
+    }
+
+    #activities_grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas: 
@@ -544,18 +611,31 @@ footer div ul li a {
 
     .accomodation_main_card {
         width: 100%;
-        height: 16.5rem
+        height: 24.5rem
     }
 
     .accomodation_main_card img {
-        height: 10rem;
-    }
-    
-    .accomodation_top_card img {
-        width: 10rem;
+        height: 18rem;
     }
 
-    #activities div {
+    .accomodation_top_card {
+        flex-direction: column;
+        height: 24.5rem;
+    }
+
+    .accomodation_top_card a {
+        flex-direction: column;
+    }
+
+    .accomodation_top_card img {
+        height: 18rem;
+        width: 100%;
+    }
+     .accomodation_top_card p {
+         line-height: unset;
+     }
+
+    #activities_grid {
         display: block;
         margin-top: 2rem;
     }
